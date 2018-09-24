@@ -179,12 +179,12 @@ e.g., writing to a file:
 
     // Generate the key material...
     KeysetHandle keysetHandle = KeysetHandle.generateNew(
-        AeadKeyTemplates.AES_128_GCM);
+        AeadKeyTemplates.AES128_GCM);
 
     // and write it to a file.
     String keysetFilename = "my_keyset.json";
     CleartextKeysetHandle.write(keysetHandle, JsonKeysetWriter.withFile(
-        new File(keysetFilename));
+        new File(keysetFilename)));
 ```
 
 Storing cleartext keysets on disk is not recommended. Tink supports encrypting
@@ -204,7 +204,7 @@ as follows:
 
     // Generate the key material...
     KeysetHandle keysetHandle = KeysetHandle.generateNew(
-        AeadKeyTemplates.AES_128_GCM);
+        AeadKeyTemplates.AES128_GCM);
 
     // and write it to a file...
     String keysetFilename = "my_keyset.json";
